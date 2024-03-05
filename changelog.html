@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Changelog &#8212; WOD5E Docs 1.0.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=4f649999" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=e7ee06a6" />
+    <script src="_static/documentation_options.js?v=8d563738"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Supported Splats" href="splats.html" />
+    <link rel="prev" title="WOD5E For FoundryVTT" href="index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="splats.html" title="Supported Splats"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="WOD5E For FoundryVTT"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">WOD5E Docs 1.0.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Changelog</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="changelog">
+<h1>Changelog<a class="headerlink" href="#changelog" title="Link to this heading">¶</a></h1>
+<section id="id1">
+<h2>3.1.3<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h2>
+<section id="from-a-player-s-side">
+<h3>From a player’s side<a class="headerlink" href="#from-a-player-s-side" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Fixed an issue where willpower rerolling Rage dice would convert them into normal Werewolf dice [Veilza]</p></li>
+</ul>
+</section>
+</section>
+<section id="id2">
+<h2>3.1.2<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h2>
+<section id="id3">
+<h3>From a player’s side<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Updated Italian translation [Arcadio21]</p></li>
+<li><p>Fixed Ghoul sheets being unable to make dialogue rolls [Veilza]</p></li>
+<li><p>Updated Werewolf dice to allow willpower rerolling of non-brutal Rage dice [Veilza]</p></li>
+<li><p>New disciplines/rituals, gifts/rites, and edges will use icons different from the default item icons now [Veilza]</p></li>
+<li><p>Fixed the enrichment of item descriptions, allowing journal entries and other Foundry items to be linked to disciplines, gifts, etc [Veilza]</p></li>
+</ul>
+</section>
+<section id="id4">
+<h3>From a player’s side<a class="headerlink" href="#id4" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Reorganized the dice icon paths and centralised where they’re obtained from into one file [Veilza]</p></li>
+<li><p>Moved dice-so-nice.js into the ‘dice’ folder [Veilza]</p></li>
+<li><p>Fixed an issue where the migration script would get stuck on migrating health/willpower trackers [Veilza]</p></li>
+</ul>
+</section>
+</section>
+<section id="id5">
+<h2>3.1.1<a class="headerlink" href="#id5" title="Link to this heading">¶</a></h2>
+<section id="id6">
+<h3>From a player’s side<a class="headerlink" href="#id6" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Removed an unnecessary field on the Hunter biography page [Veilza]</p></li>
+<li><p>Fixed an issue that prevented Coterie and Cell sheets from loading [Veilza]</p></li>
+</ul>
+</section>
+<section id="from-a-developer-s-side">
+<h3>From a developer’s side<a class="headerlink" href="#from-a-developer-s-side" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Add a separate localization for the word “Drive” specific to the Hunter term [Veilza]</p></li>
+</ul>
+</section>
+</section>
+<section id="id7">
+<h2>3.1.0<a class="headerlink" href="#id7" title="Link to this heading">¶</a></h2>
+<section id="id8">
+<h3>From a player’s side<a class="headerlink" href="#id8" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Fixed Discipline Rouse rerolls to properly display what was rerolled, and to properly reroll dice twice and keep highest between each roll. [Veilza]</p></li>
+<li><p>Add Macro compendium and a couple of useful macros for storytellers [Veilza]</p></li>
+<li><p>The navigation bar on sheets will now use the right cursor type and properly expand the active background to either side of the tab. [Veilza]</p></li>
+<li><p>Fixed the items on the Features tab being unable to be expanded [Veilza]</p></li>
+<li><p>Alterations to the dice faces to make them more colourblind-friendly [LorduFreeman]</p></li>
+</ul>
+</section>
+<section id="id9">
+<h3>From a developer’s side<a class="headerlink" href="#id9" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Shifted various parts of main.js into their own files. [Veilza]</p></li>
+<li><p>Moved the “gamesystem” definition to the actor template [Veilza]</p></li>
+<li><p>Updated “vtm5e.css” to “wod5e.css”</p></li>
+<li><p>Moved various parts of the wod5e.css file to other files, for maintainability [Veilza]</p></li>
+</ul>
+</section>
+</section>
+<section id="id10">
+<h2>3.0.0<a class="headerlink" href="#id10" title="Link to this heading">¶</a></h2>
+<section id="id11">
+<h3>From a player’s side<a class="headerlink" href="#id11" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Werewolf 5th Edition support [Veilza]</p></li>
+<li><p>Overhaul to the sheets’ designs, making them more consistent across the different splats [Veilza]</p></li>
+<li><p>Fixes to Dark Mode and its various styling [Veilza]</p></li>
+<li><p>“Legacy” sheets that were made before a certain version have now been properly migrated to “Vampire” sheets [Veilza]</p></li>
+<li><p>Ghouls will now take Aggravated damage upon clicking the “Rouse” button on discipline powers greater than level 1 [Veilza]</p></li>
+<li><p>Disciplines now have a “Cost” field to input the number of appropriate Rouse checks. [Veilza]</p></li>
+<li><p>Added this Changelog file [Veilza]</p></li>
+<li><p>Fix input fields on item sheets being hard to read [Veilza]</p></li>
+<li><p>Hunter Edges, Vampire Disciplines/Rituals, and Werewolf Gifts/Rites will now all be sorted by level first and then alphabetically [Veilza]</p></li>
+<li><p>Edges, Disciplines/Rituals, and Gifts/Rites will now have a red effect overlayed on their icons if they’re rollable. [Veilza]</p></li>
+<li><p>Various fields on the Hunter and Vampire sheets will no longer be hidden until the actor fills in Cell/Clan. [Veilza]</p></li>
+<li><p>Added Werewolf dice and updated the styling on the other splat’s dice [LorduFreeman]</p></li>
+<li><p>Various styling fixes [LorduFreeman]</p></li>
+<li><p>Rouse checks on Vampire Disciplines will now add hunger for all failed dice [Veilza]</p></li>
+<li><p>Rouse checks will now display rerolled dice in chat as greyed out [Veilza]</p></li>
+<li><p>Actor banners at the top of character sheets (formerly below the player avatar) can now be disabled within the settings [Veilza]</p></li>
+</ul>
+</section>
+<section id="id12">
+<h3>From a developer’s side<a class="headerlink" href="#id12" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Reorganized sheet partials [Veilza]</p></li>
+<li><p>Reworked how the actor dialogue is localized [Veilza]</p></li>
+<li><p>Reworked how the various splats’ dice are called [Veilza]</p></li>
+<li><p>The system now uses “WoDActor” and “WoDItem” as the export classes for base actors/items and their functionality [Veilza]</p></li>
+<li><p>Reworked the migration scripts [Veilza]</p></li>
+<li><p>All instances of “VTM5E” in localization and CSS classes have now been changed to “WOD5E,” with a migration script to fix any sheets made from before this fix [Veilza]</p></li>
+</ul>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Changelog</a><ul>
+<li><a class="reference internal" href="#id1">3.1.3</a><ul>
+<li><a class="reference internal" href="#from-a-player-s-side">From a player’s side</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id2">3.1.2</a><ul>
+<li><a class="reference internal" href="#id3">From a player’s side</a></li>
+<li><a class="reference internal" href="#id4">From a player’s side</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id5">3.1.1</a><ul>
+<li><a class="reference internal" href="#id6">From a player’s side</a></li>
+<li><a class="reference internal" href="#from-a-developer-s-side">From a developer’s side</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id7">3.1.0</a><ul>
+<li><a class="reference internal" href="#id8">From a player’s side</a></li>
+<li><a class="reference internal" href="#id9">From a developer’s side</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id10">3.0.0</a><ul>
+<li><a class="reference internal" href="#id11">From a player’s side</a></li>
+<li><a class="reference internal" href="#id12">From a developer’s side</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="index.html"
+                          title="previous chapter">WOD5E For FoundryVTT</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="splats.html"
+                          title="next chapter">Supported Splats</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/changelog.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="splats.html" title="Supported Splats"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="WOD5E For FoundryVTT"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">WOD5E Docs 1.0.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Changelog</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2024, Veilza.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+Supported Splats
+================
+
+Vampire the Masquerade
+----------------------
+Vampire the Masquerade is the most iconic of World of Darkness gamelines, and its 5th edition was published in 2018. The first ever release of VTM5 for FoundryVTT was in 2020, by Rayji96.
+
+The WOD5E system includes support for Vampire and Ghoul sheets, as well as a Coterie sheet.
+
+Hunter the Reckoning
+--------------------
+Hunter the Reckoning was added to the Foundry system by MrDionysus in 2022 with version 2.0.0, shortly after the sourcebook's publication in the same year.
+
+The WOD5E system includes support for Hunter sheets and the Cell character sheet.
+
+Werewolf the Apocalypse
+-----------------------
+Werewolf the Apocalypse was added to the Foundry system in 2023 by Veilza with release 3.0.0, shortly after its publication in the same year.
+
+The WOD5E system includes support for Werewolf character sheets, and plans for a Pack sheet is in the works.
+
+.. toctree::
+    :maxdepth: 2
+    :titlesonly:

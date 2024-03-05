@@ -1,0 +1,10 @@
+/* This is to make small edits to the Groundwork theme */
+@import url('./groundwork.css');
+
+a:visited {
+  color: #CB91FF;
+}
+
+a:hover {
+  color: #ff0000;
+}

@@ -1,0 +1,24 @@
+Bonuses & Modifiers
+===================
+
+Situational Modifiers
+---------------------
+Situational modifiers are any modifier that can be toggled on and off in the roll dialogue. This includes specialties that can be added via the Skills editor and custom bonuses that can be added through any item.
+
+Specialties
+-----------
+Specialties are added specifically through the Skill editor window that can be accessed while the actor sheet is unlocked. By default, clicking "Add Specialty" will open a window with the default variables to apply the situational modifier properly, such as the skill path.
+
+Item & Feature Bonuses
+----------------------
+All non-specialty bonuses can be added through their "Bonus" tab that appears on both items and various features.
+
+Splat-Specific Bonuses
+----------------------
+Vampires automatically have Potency bonuses generated to apply to any discipline rolls.
+
+Werewolves have Form bonuses added and set to apply based on their current form.
+
+.. toctree::
+    :maxdepth: 2
+    :titlesonly:

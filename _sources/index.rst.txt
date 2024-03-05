@@ -1,0 +1,20 @@
+WOD5E For FoundryVTT
+====================
+
+Hello, and welcome to the *World of Darkness 5th Edition* (WOD5E) system documentation! Here you'll find all the information about the `WOD5E system <https://foundryvtt.com/packages/vtm5e/>`_ on `FoundryVTT <https://foundryvtt.com/>`_! Here, you'll find changelogs, some assistance for using the system, and other things that may need to be documented but can't be explained in the system itself!
+
+The goal is to provide the best experience for users who want the most out of the WOD5E system by putting all the information in a nice, well-laid out place. If you have any suggestions, please head over to the Github issues page here and submit them! If you have suggestions for the system itself, here's the official WOD5E repository issue page.
+
+General Overview
+----------------
+
+.. toctree::
+   :maxdepth: 1
+
+   changelog
+   splats
+   bonuses
+
+Dark Pack License
+-----------------
+To the best of our abilities, the World of Darkness 5th Edition system on FoundryVTT follows all appropriate Dark Pack guidelines. Any reference to World of Darkness and its 5th edition gameline are done with the Dark Pack license in mind, and we have no intentions on distributing any official content that is not licensed under the Dark Pack.
