@@ -7,10 +7,12 @@
 
     <title>Changelog &#8212; WOD5E Docs 1.0.0 documentation</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=4f649999" />
-    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=e7ee06a6" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=9869c777" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
     <script src="_static/documentation_options.js?v=8d563738"></script>
     <script src="_static/doctools.js?v=888ff710"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/design-tabs.js?v=36754332"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Supported Splats" href="splats.html" />
@@ -40,133 +42,168 @@
             
   <section id="changelog">
 <h1>Changelog<a class="headerlink" href="#changelog" title="Link to this heading">¶</a></h1>
-<section id="id1">
-<h2>4.0.0<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h2>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 sd-fade-in-slide-down" open="open">
+<summary class="sd-summary-title sd-card-header sd-bg-dark sd-bg-text-dark">
+4.0.0<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p class="sd-card-text"><strong>System manifest:</strong> <a class="reference external" href="https://github.com/Rayji96/foundry-V5/releases/download/4.0.0/system.json">https://github.com/Rayji96/foundry-V5/releases/download/4.0.0/system.json</a></p>
+<p class="sd-card-text"><strong>Direct download link;</strong> <a class="reference external" href="https://github.com/Rayji96/foundry-V5/releases/download/4.0.0/vtm5e-4.0.0.zip">https://github.com/Rayji96/foundry-V5/releases/download/4.0.0/vtm5e-4.0.0.zip</a></p>
+</div>
 <ul class="simple">
-<li><p>When selecting a skill or attribute to be rolled, a brand new roll dialog will pop up! It will first prompt you for any skills, attributes, renown, or discipline dice you want to add, and then bring you to a different dialog window that will display all dice that’ll be rolled where you can add situational modifiers and otherwise adjust the dice you’re rolling before officially making the roll. Did I mention rolling dice? [Veilza]</p></li>
-<li><p>Specialties are now marked on the skills themselves with an ‘S’ symbol. [Veilza]</p></li>
-<li><p>Specialties can now be edited in the new Skill Editor dialog [Veilza]</p></li>
-<li><p>Updates to how roll messages are displayed, including being able to see the actual dice that were rolled by clicking on the message. [Veilza]</p></li>
-<li><p>If a roll has a description or flavourtext associated with it, it’ll be displayed with the chat message generated with the roll. [Veilza]</p></li>
-<li><p>Items can now be configured to have ‘bonuses’ that can show up alongside rolls, similar to how skill specialties are now handled. [Veilza]</p></li>
-<li><p>Vampires have preconfigured potency bonuses that’ll show up on discipline-based rolls. [Veilza]</p></li>
-<li><p>Werewolf forms have preconfigured bonuses that’ll show up depending on which form is active [Veilza]</p></li>
-<li><p>Removed unnecessary punctuation from localization strings [Veilza]</p></li>
-<li><p>Updated the Brazilian Portuguese translation files with new localizations [viniciusaraujo093]</p></li>
-<li><p>Fixed an alignment issue on the Limited sheets [Veilza]</p></li>
-<li><p>Added an API that has various functions useful for both modules and macros, including the ability to call the system’s Roll function [Veilza]</p></li>
-<li><p>Added support for rolling renown and disciplines directly [Veilza]</p></li>
-<li><p>Added a modifier field to the custom rolls [Veilza]</p></li>
-<li><p>Added the ability to process macros immediately after a roll, power or feature is used [Veilza]</p></li>
-<li><p>Updated the adjust rage and adjust hunger macros to display a chat message after the adjustment [Veilza]</p></li>
-<li><p>Added a willpower cost field to Werewolf gifts [Veilza]</p></li>
-<li><p>Willpower damage is now output to chat [Veilza]</p></li>
-<li><p>Willpower rerolls will now replace the original chatmessage being rerolled [Veilza]</p></li>
-<li><p>Fixed an issue where rouse checks would cause multiple instances of hunger increase, even for discarded die [Veilza]</p></li>
-<li><p>Spanish localization updates [erizocosmico]</p></li>
-<li><p>Dark theme and actor banners will now update without having to refresh the page [Veilza]</p></li>
-<li><p>Items will now be properly localized in the sidebar [Veilza]</p></li>
-<li><p>Removed diceroller settings, due to the diceroller being disabled until it can be fixed [Veilza]</p></li>
-<li><p>Russian translation thanks to [Xuula]</p></li>
-<li><p>All .html files have been renamed to .hbs to properly allow code editors to pick up you’re using Handlebars without any additional editing. [Veilza]</p></li>
-<li><p>Various functions in the actor sheet have been moved to their own files [Veilza]</p></li>
-<li><p>Various CSS stylings have been moved to their own files [Veilza]</p></li>
-<li><p>The ‘or’ helper can now handle more than two given things to check for [Veilza]</p></li>
-<li><p>Lots of other adjustments and fixes to enable code to be more clean and concise, as well as separating things into their own files for better maintainability. [Veilza]</p></li>
-<li><p>Reworked the localization files by adding dot-notation and separating them into core/vampire/werewolf/hunter files for easier organisation [Veilza]</p></li>
-<li><p>Fixed an issue with the gamesystem migration [Veilza]</p></li>
-<li><p>Updated the way localizations for skills, attributes, renown, disciplines, and features are done in Handlebars templates [Veilza]</p></li>
-<li><p>Fixed the convert-packs script [Veilza]</p></li>
-<li><p>Added various missing localization strings and marked the ones that aren’t yet localized [Veilza]</p></li>
-<li><p>Changed how the system looks up the available game systems [Veilza]</p></li>
-<li><p>Added new localization for item types [Veilza]</p></li>
-<li><p>Removed unnecessary actor labels in the templating [Veilza]</p></li>
-<li><p>Actorsheets will now be pulled from the ActorTypes.js definition file instead of hard-coded [Veilza]</p></li>
-<li><p>Renamed “powers” assets folder to “items” and added various item icons, with a migration for old items [Veilza]</p></li>
-<li><p>Items will now pull their icons from the “items” definition file [Veilza]</p></li>
-<li><p>Reworded and renamed WOD5E settings to be more consistent [Veilza]</p></li>
-<li><p>Removed the old “getItemDefaultName” function and newly created items will now use generateLabelAndLocalize instead [Veilza]</p></li>
-<li><p>Moved blood-potency.js into the scripts folder [Veilza]</p></li>
-<li><p>Added a new “reset actors” function to re-render the sheets with its existing data. [Veilza]</p></li>
-<li><p>Upgraded the collapse function on actor sheets to prevent issues where some collapsible content wouldn’t collapse and uncollapse [Veilza]</p></li>
-<li><p>Changed “animal ken” to “animalken” in the actor data [Veilza]</p></li>
-<li><p>Added max values to hunger and rage so they can appear as token bars [Veilza]</p></li>
-<li><p>Removed unnecessary punctuation from localization files [Veilza]</p></li>
-<li><p>Various fixes for migration files to make them more reliable and fix the debounced reload not always triggering [Veilza]</p></li>
+<li><p class="sd-card-text">When selecting a skill or attribute to be rolled, a brand new roll dialog will pop up! It will first prompt you for any skills, attributes, renown, or discipline dice you want to add, and then bring you to a different dialog window that will display all dice that’ll be rolled where you can add situational modifiers and otherwise adjust the dice you’re rolling before officially making the roll. Did I mention rolling dice? [Veilza]</p></li>
+<li><p class="sd-card-text">Specialties are now marked on the skills themselves with an ‘S’ symbol. [Veilza]</p></li>
+<li><p class="sd-card-text">Specialties can now be edited in the new Skill Editor dialog [Veilza]</p></li>
+<li><p class="sd-card-text">Updates to how roll messages are displayed, including being able to see the actual dice that were rolled by clicking on the message. [Veilza]</p></li>
+<li><p class="sd-card-text">If a roll has a description or flavourtext associated with it, it’ll be displayed with the chat message generated with the roll. [Veilza]</p></li>
+<li><p class="sd-card-text">Items can now be configured to have ‘bonuses’ that can show up alongside rolls, similar to how skill specialties are now handled. [Veilza]</p></li>
+<li><p class="sd-card-text">Vampires have preconfigured potency bonuses that’ll show up on discipline-based rolls. [Veilza]</p></li>
+<li><p class="sd-card-text">Werewolf forms have preconfigured bonuses that’ll show up depending on which form is active [Veilza]</p></li>
+<li><p class="sd-card-text">Removed unnecessary punctuation from localization strings [Veilza]</p></li>
+<li><p class="sd-card-text">Updated the Brazilian Portuguese translation files with new localizations [viniciusaraujo093]</p></li>
+<li><p class="sd-card-text">Fixed an alignment issue on the Limited sheets [Veilza]</p></li>
+<li><p class="sd-card-text">Added an API that has various functions useful for both modules and macros, including the ability to call the system’s Roll function [Veilza]</p></li>
+<li><p class="sd-card-text">Added support for rolling renown and disciplines directly [Veilza]</p></li>
+<li><p class="sd-card-text">Added a modifier field to the custom rolls [Veilza]</p></li>
+<li><p class="sd-card-text">Added the ability to process macros immediately after a roll, power or feature is used [Veilza]</p></li>
+<li><p class="sd-card-text">Updated the adjust rage and adjust hunger macros to display a chat message after the adjustment [Veilza]</p></li>
+<li><p class="sd-card-text">Added a willpower cost field to Werewolf gifts [Veilza]</p></li>
+<li><p class="sd-card-text">Willpower damage is now output to chat [Veilza]</p></li>
+<li><p class="sd-card-text">Willpower rerolls will now replace the original chatmessage being rerolled [Veilza]</p></li>
+<li><p class="sd-card-text">Fixed an issue where rouse checks would cause multiple instances of hunger increase, even for discarded die [Veilza]</p></li>
+<li><p class="sd-card-text">Spanish localization updates [erizocosmico]</p></li>
+<li><p class="sd-card-text">Dark theme and actor banners will now update without having to refresh the page [Veilza]</p></li>
+<li><p class="sd-card-text">Items will now be properly localized in the sidebar [Veilza]</p></li>
+<li><p class="sd-card-text">Removed diceroller settings, due to the diceroller being disabled until it can be fixed [Veilza]</p></li>
+<li><p class="sd-card-text">Russian translation thanks to [Xuula]</p></li>
+<li><p class="sd-card-text">All .html files have been renamed to .hbs to properly allow code editors to pick up you’re using Handlebars without any additional editing. [Veilza]</p></li>
+<li><p class="sd-card-text">Various functions in the actor sheet have been moved to their own files [Veilza]</p></li>
+<li><p class="sd-card-text">Various CSS stylings have been moved to their own files [Veilza]</p></li>
+<li><p class="sd-card-text">The ‘or’ helper can now handle more than two given things to check for [Veilza]</p></li>
+<li><p class="sd-card-text">Lots of other adjustments and fixes to enable code to be more clean and concise, as well as separating things into their own files for better maintainability. [Veilza]</p></li>
+<li><p class="sd-card-text">Reworked the localization files by adding dot-notation and separating them into core/vampire/werewolf/hunter files for easier organisation [Veilza]</p></li>
+<li><p class="sd-card-text">Fixed an issue with the gamesystem migration [Veilza]</p></li>
+<li><p class="sd-card-text">Updated the way localizations for skills, attributes, renown, disciplines, and features are done in Handlebars templates [Veilza]</p></li>
+<li><p class="sd-card-text">Fixed the convert-packs script [Veilza]</p></li>
+<li><p class="sd-card-text">Added various missing localization strings and marked the ones that aren’t yet localized [Veilza]</p></li>
+<li><p class="sd-card-text">Changed how the system looks up the available game systems [Veilza]</p></li>
+<li><p class="sd-card-text">Added new localization for item types [Veilza]</p></li>
+<li><p class="sd-card-text">Removed unnecessary actor labels in the templating [Veilza]</p></li>
+<li><p class="sd-card-text">Actorsheets will now be pulled from the ActorTypes.js definition file instead of hard-coded [Veilza]</p></li>
+<li><p class="sd-card-text">Renamed “powers” assets folder to “items” and added various item icons, with a migration for old items [Veilza]</p></li>
+<li><p class="sd-card-text">Items will now pull their icons from the “items” definition file [Veilza]</p></li>
+<li><p class="sd-card-text">Reworded and renamed WOD5E settings to be more consistent [Veilza]</p></li>
+<li><p class="sd-card-text">Removed the old “getItemDefaultName” function and newly created items will now use generateLabelAndLocalize instead [Veilza]</p></li>
+<li><p class="sd-card-text">Moved blood-potency.js into the scripts folder [Veilza]</p></li>
+<li><p class="sd-card-text">Added a new “reset actors” function to re-render the sheets with its existing data. [Veilza]</p></li>
+<li><p class="sd-card-text">Upgraded the collapse function on actor sheets to prevent issues where some collapsible content wouldn’t collapse and uncollapse [Veilza]</p></li>
+<li><p class="sd-card-text">Changed “animal ken” to “animalken” in the actor data [Veilza]</p></li>
+<li><p class="sd-card-text">Added max values to hunger and rage so they can appear as token bars [Veilza]</p></li>
+<li><p class="sd-card-text">Removed unnecessary punctuation from localization files [Veilza]</p></li>
+<li><p class="sd-card-text">Various fixes for migration files to make them more reliable and fix the debounced reload not always triggering [Veilza]</p></li>
 </ul>
-</section>
-<section id="id2">
-<h2>3.1.3<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h2>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 sd-fade-in-slide-down">
+<summary class="sd-summary-title sd-card-header sd-bg-dark sd-bg-text-dark">
+3.1.3<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
 <ul class="simple">
-<li><p>Fixed an issue where willpower rerolling Rage dice would convert them into normal Werewolf dice [Veilza]</p></li>
+<li><p class="sd-card-text">Fixed an issue where willpower rerolling Rage dice would convert them into normal Werewolf dice [Veilza]</p></li>
 </ul>
-</section>
-<section id="id3">
-<h2>3.1.2<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h2>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 sd-fade-in-slide-down">
+<summary class="sd-summary-title sd-card-header sd-bg-dark sd-bg-text-dark">
+3.1.2<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
 <ul class="simple">
-<li><p>Updated Italian translation [Arcadio21]</p></li>
-<li><p>Fixed Ghoul sheets being unable to make dialogue rolls [Veilza]</p></li>
-<li><p>Updated Werewolf dice to allow willpower rerolling of non-brutal Rage dice [Veilza]</p></li>
-<li><p>New disciplines/rituals, gifts/rites, and edges will use icons different from the default item icons now [Veilza]</p></li>
-<li><p>Fixed the enrichment of item descriptions, allowing journal entries and other Foundry items to be linked to disciplines, gifts, etc [Veilza]</p></li>
-<li><p>Reorganized the dice icon paths and centralised where they’re obtained from into one file [Veilza]</p></li>
-<li><p>Moved dice-so-nice.js into the ‘dice’ folder [Veilza]</p></li>
-<li><p>Fixed an issue where the migration script would get stuck on migrating health/willpower trackers [Veilza]</p></li>
+<li><p class="sd-card-text">Updated Italian translation [Arcadio21]</p></li>
+<li><p class="sd-card-text">Fixed Ghoul sheets being unable to make dialogue rolls [Veilza]</p></li>
+<li><p class="sd-card-text">Updated Werewolf dice to allow willpower rerolling of non-brutal Rage dice [Veilza]</p></li>
+<li><p class="sd-card-text">New disciplines/rituals, gifts/rites, and edges will use icons different from the default item icons now [Veilza]</p></li>
+<li><p class="sd-card-text">Fixed the enrichment of item descriptions, allowing journal entries and other Foundry items to be linked to disciplines, gifts, etc [Veilza]</p></li>
+<li><p class="sd-card-text">Reorganized the dice icon paths and centralised where they’re obtained from into one file [Veilza]</p></li>
+<li><p class="sd-card-text">Moved dice-so-nice.js into the ‘dice’ folder [Veilza]</p></li>
+<li><p class="sd-card-text">Fixed an issue where the migration script would get stuck on migrating health/willpower trackers [Veilza]</p></li>
 </ul>
-</section>
-<section id="id4">
-<h2>3.1.1<a class="headerlink" href="#id4" title="Link to this heading">¶</a></h2>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 sd-fade-in-slide-down">
+<summary class="sd-summary-title sd-card-header sd-bg-dark sd-bg-text-dark">
+3.1.1<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
 <ul class="simple">
-<li><p>Removed an unnecessary field on the Hunter biography page [Veilza]</p></li>
-<li><p>Fixed an issue that prevented Coterie and Cell sheets from loading [Veilza]</p></li>
-<li><p>Add a separate localization for the word “Drive” specific to the Hunter term [Veilza]</p></li>
+<li><p class="sd-card-text">Removed an unnecessary field on the Hunter biography page [Veilza]</p></li>
+<li><p class="sd-card-text">Fixed an issue that prevented Coterie and Cell sheets from loading [Veilza]</p></li>
+<li><p class="sd-card-text">Add a separate localization for the word “Drive” specific to the Hunter term [Veilza]</p></li>
 </ul>
-</section>
-<section id="id5">
-<h2>3.1.0<a class="headerlink" href="#id5" title="Link to this heading">¶</a></h2>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 sd-fade-in-slide-down">
+<summary class="sd-summary-title sd-card-header sd-bg-dark sd-bg-text-dark">
+3.1.0<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
 <ul class="simple">
-<li><p>Fixed Discipline Rouse rerolls to properly display what was rerolled, and to properly reroll dice twice and keep highest between each roll. [Veilza]</p></li>
-<li><p>Add Macro compendium and a couple of useful macros for storytellers [Veilza]</p></li>
-<li><p>The navigation bar on sheets will now use the right cursor type and properly expand the active background to either side of the tab. [Veilza]</p></li>
-<li><p>Fixed the items on the Features tab being unable to be expanded [Veilza]</p></li>
-<li><p>Alterations to the dice faces to make them more colourblind-friendly [LorduFreeman]</p></li>
-<li><p>Shifted various parts of main.js into their own files. [Veilza]</p></li>
-<li><p>Moved the “gamesystem” definition to the actor template [Veilza]</p></li>
-<li><p>Updated “vtm5e.css” to “wod5e.css”</p></li>
-<li><p>Moved various parts of the wod5e.css file to other files, for maintainability [Veilza]</p></li>
+<li><p class="sd-card-text">Fixed Discipline Rouse rerolls to properly display what was rerolled, and to properly reroll dice twice and keep highest between each roll. [Veilza]</p></li>
+<li><p class="sd-card-text">Add Macro compendium and a couple of useful macros for storytellers [Veilza]</p></li>
+<li><p class="sd-card-text">The navigation bar on sheets will now use the right cursor type and properly expand the active background to either side of the tab. [Veilza]</p></li>
+<li><p class="sd-card-text">Fixed the items on the Features tab being unable to be expanded [Veilza]</p></li>
+<li><p class="sd-card-text">Alterations to the dice faces to make them more colourblind-friendly [LorduFreeman]</p></li>
+<li><p class="sd-card-text">Shifted various parts of main.js into their own files. [Veilza]</p></li>
+<li><p class="sd-card-text">Moved the “gamesystem” definition to the actor template [Veilza]</p></li>
+<li><p class="sd-card-text">Updated “vtm5e.css” to “wod5e.css”</p></li>
+<li><p class="sd-card-text">Moved various parts of the wod5e.css file to other files, for maintainability [Veilza]</p></li>
 </ul>
-</section>
-<section id="id6">
-<h2>3.0.0<a class="headerlink" href="#id6" title="Link to this heading">¶</a></h2>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 sd-fade-in-slide-down">
+<summary class="sd-summary-title sd-card-header sd-bg-dark sd-bg-text-dark">
+3.0.0<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
 <ul class="simple">
-<li><p>Werewolf 5th Edition support [Veilza]</p></li>
-<li><p>Overhaul to the sheets’ designs, making them more consistent across the different splats [Veilza]</p></li>
-<li><p>Fixes to Dark Mode and its various styling [Veilza]</p></li>
-<li><p>“Legacy” sheets that were made before a certain version have now been properly migrated to “Vampire” sheets [Veilza]</p></li>
-<li><p>Ghouls will now take Aggravated damage upon clicking the “Rouse” button on discipline powers greater than level 1 [Veilza]</p></li>
-<li><p>Disciplines now have a “Cost” field to input the number of appropriate Rouse checks. [Veilza]</p></li>
-<li><p>Added this Changelog file [Veilza]</p></li>
-<li><p>Fix input fields on item sheets being hard to read [Veilza]</p></li>
-<li><p>Hunter Edges, Vampire Disciplines/Rituals, and Werewolf Gifts/Rites will now all be sorted by level first and then alphabetically [Veilza]</p></li>
-<li><p>Edges, Disciplines/Rituals, and Gifts/Rites will now have a red effect overlayed on their icons if they’re rollable. [Veilza]</p></li>
-<li><p>Various fields on the Hunter and Vampire sheets will no longer be hidden until the actor fills in Cell/Clan. [Veilza]</p></li>
-<li><p>Added Werewolf dice and updated the styling on the other splat’s dice [LorduFreeman]</p></li>
-<li><p>Various styling fixes [LorduFreeman]</p></li>
-<li><p>Rouse checks on Vampire Disciplines will now add hunger for all failed dice [Veilza]</p></li>
-<li><p>Rouse checks will now display rerolled dice in chat as greyed out [Veilza]</p></li>
-<li><p>Actor banners at the top of character sheets (formerly below the player avatar) can now be disabled within the settings [Veilza]</p></li>
-<li><p>Reorganized sheet partials [Veilza]</p></li>
-<li><p>Reworked how the actor dialogue is localized [Veilza]</p></li>
-<li><p>Reworked how the various splats’ dice are called [Veilza]</p></li>
-<li><p>The system now uses “WoDActor” and “WoDItem” as the export classes for base actors/items and their functionality [Veilza]</p></li>
-<li><p>Reworked the migration scripts [Veilza]</p></li>
-<li><p>All instances of “VTM5E” in localization and CSS classes have now been changed to “WOD5E,” with a migration script to fix any sheets made from before this fix [Veilza]</p></li>
+<li><p class="sd-card-text">Werewolf 5th Edition support [Veilza]</p></li>
+<li><p class="sd-card-text">Overhaul to the sheets’ designs, making them more consistent across the different splats [Veilza]</p></li>
+<li><p class="sd-card-text">Fixes to Dark Mode and its various styling [Veilza]</p></li>
+<li><p class="sd-card-text">“Legacy” sheets that were made before a certain version have now been properly migrated to “Vampire” sheets [Veilza]</p></li>
+<li><p class="sd-card-text">Ghouls will now take Aggravated damage upon clicking the “Rouse” button on discipline powers greater than level 1 [Veilza]</p></li>
+<li><p class="sd-card-text">Disciplines now have a “Cost” field to input the number of appropriate Rouse checks. [Veilza]</p></li>
+<li><p class="sd-card-text">Added this Changelog file [Veilza]</p></li>
+<li><p class="sd-card-text">Fix input fields on item sheets being hard to read [Veilza]</p></li>
+<li><p class="sd-card-text">Hunter Edges, Vampire Disciplines/Rituals, and Werewolf Gifts/Rites will now all be sorted by level first and then alphabetically [Veilza]</p></li>
+<li><p class="sd-card-text">Edges, Disciplines/Rituals, and Gifts/Rites will now have a red effect overlayed on their icons if they’re rollable. [Veilza]</p></li>
+<li><p class="sd-card-text">Various fields on the Hunter and Vampire sheets will no longer be hidden until the actor fills in Cell/Clan. [Veilza]</p></li>
+<li><p class="sd-card-text">Added Werewolf dice and updated the styling on the other splat’s dice [LorduFreeman]</p></li>
+<li><p class="sd-card-text">Various styling fixes [LorduFreeman]</p></li>
+<li><p class="sd-card-text">Rouse checks on Vampire Disciplines will now add hunger for all failed dice [Veilza]</p></li>
+<li><p class="sd-card-text">Rouse checks will now display rerolled dice in chat as greyed out [Veilza]</p></li>
+<li><p class="sd-card-text">Actor banners at the top of character sheets (formerly below the player avatar) can now be disabled within the settings [Veilza]</p></li>
+<li><p class="sd-card-text">Reorganized sheet partials [Veilza]</p></li>
+<li><p class="sd-card-text">Reworked how the actor dialogue is localized [Veilza]</p></li>
+<li><p class="sd-card-text">Reworked how the various splats’ dice are called [Veilza]</p></li>
+<li><p class="sd-card-text">The system now uses “WoDActor” and “WoDItem” as the export classes for base actors/items and their functionality [Veilza]</p></li>
+<li><p class="sd-card-text">Reworked the migration scripts [Veilza]</p></li>
+<li><p class="sd-card-text">All instances of “VTM5E” in localization and CSS classes have now been changed to “WOD5E,” with a migration script to fix any sheets made from before this fix [Veilza]</p></li>
 </ul>
-<div class="toctree-wrapper compound">
+</div>
+</details><div class="toctree-wrapper compound">
 </div>
 <div class="toctree-wrapper compound">
 </div>
-</section>
 </section>
 
 
@@ -176,23 +213,6 @@
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <div>
-    <h3><a href="index.html">Table of Contents</a></h3>
-    <ul>
-<li><a class="reference internal" href="#">Changelog</a><ul>
-<li><a class="reference internal" href="#id1">4.0.0</a></li>
-<li><a class="reference internal" href="#id2">3.1.3</a></li>
-<li><a class="reference internal" href="#id3">3.1.2</a></li>
-<li><a class="reference internal" href="#id4">3.1.1</a></li>
-<li><a class="reference internal" href="#id5">3.1.0</a></li>
-<li><a class="reference internal" href="#id6">3.0.0</a><ul>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-  </div>
   <div>
     <h4>Previous topic</h4>
     <p class="topless"><a href="index.html"

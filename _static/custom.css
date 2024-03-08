@@ -8,3 +8,8 @@ a:visited {
 a:hover {
   color: #ff0000;
 }
+
+div.note {
+  margin-left: 10px;
+  margin-right: 10px;
+}
