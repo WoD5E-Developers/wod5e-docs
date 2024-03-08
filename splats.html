@@ -44,6 +44,16 @@
 <h2>Vampire the Masquerade<a class="headerlink" href="#vampire-the-masquerade" title="Link to this heading">¶</a></h2>
 <p>Vampire the Masquerade is the most iconic of World of Darkness gamelines, and its 5th edition was published in 2018. The first ever release of VTM5 for FoundryVTT was in 2020, by Rayji96.</p>
 <p>The WOD5E system includes support for Vampire and Ghoul sheets, as well as a Coterie sheet.</p>
+<section id="automation">
+<h3>Automation<a class="headerlink" href="#automation" title="Link to this heading">¶</a></h3>
+<p>Vampire sheets have basic automation for Hunger dice:</p>
+<ul class="simple">
+<li><p><strong>Hunger Dice.</strong> Hunger dice can be rolled from the “Rouse” button in the sheet’s header, or by clicking the “Hunger Cost” button on the right side of any Discipline. This will, if enabled, automatically increase hunger on any failed Hunger dice rolls.</p></li>
+<li><p><strong>Ghoul Discipline Powers.</strong> Ghoul sheets, because they don’t have hunger, instead will deal one Aggravated damage when the “Cost” button on a Discipline is pressed for any Discipline power greater than level 1.</p></li>
+<li><p><strong>Blood Potency Bonuses.</strong> Bonuses to discipline rolls are automatically added in the roll dialogue if a vampire’s potency is high enough.</p></li>
+<li><p><strong>Rouse Check Re-rolls.</strong> If a vampire’s potency is high enough, then it will automatically roll extra dice on any discipline power rouse check and keep the highest results.</p></li>
+</ul>
+</section>
 </section>
 <section id="hunter-the-reckoning">
 <h2>Hunter the Reckoning<a class="headerlink" href="#hunter-the-reckoning" title="Link to this heading">¶</a></h2>
@@ -54,8 +64,17 @@
 <h2>Werewolf the Apocalypse<a class="headerlink" href="#werewolf-the-apocalypse" title="Link to this heading">¶</a></h2>
 <p>Werewolf the Apocalypse was added to the Foundry system in 2023 by Veilza with release 3.0.0, shortly after its publication in the same year.</p>
 <p>The WOD5E system includes support for Werewolf character sheets, and plans for a Pack sheet is in the works.</p>
+<section id="id1">
+<h3>Automation<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h3>
+<p>Werewolf sheets come with various bits of automation:</p>
+<ul class="simple">
+<li><p><strong>Rage Dice.</strong> Rage dice can be rolled by the <em>Rage</em> button in the sheet’s header, or by clicking the “Rage/Willpower Cost” button the right side of any Gift. This will, if the setting is enabled, automatically reduce the rage on any failed Rage dice rolls.</p></li>
+<li><p><strong>Form Transformations.</strong> Werewolf sheets also come with automation for switching forms; upon clicking to switch forms, if there’s a Rage cost to switching forms, the sheet will automatically roll any necessary Rage dice before updating your active form. If this reduces your Rage to 0, shifting forms will fail.</p></li>
+<li><p><strong>Gift Costs.</strong> Alongside Rage Dice automation, Gifts also have a “Willpower Cost” field, which can automatically damage willpower upon using the gift. This is done with the same button as rolling the Rage cost of a gift.</p></li>
+</ul>
 <div class="toctree-wrapper compound">
 </div>
+</section>
 </section>
 </section>
 
@@ -70,9 +89,15 @@
     <h3><a href="index.html">Table of Contents</a></h3>
     <ul>
 <li><a class="reference internal" href="#">Supported Splats</a><ul>
-<li><a class="reference internal" href="#vampire-the-masquerade">Vampire the Masquerade</a></li>
+<li><a class="reference internal" href="#vampire-the-masquerade">Vampire the Masquerade</a><ul>
+<li><a class="reference internal" href="#automation">Automation</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#hunter-the-reckoning">Hunter the Reckoning</a></li>
-<li><a class="reference internal" href="#werewolf-the-apocalypse">Werewolf the Apocalypse</a></li>
+<li><a class="reference internal" href="#werewolf-the-apocalypse">Werewolf the Apocalypse</a><ul>
+<li><a class="reference internal" href="#id1">Automation</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
