@@ -39,6 +39,20 @@
 <section id="situational-modifiers">
 <h2>Situational Modifiers<a class="headerlink" href="#situational-modifiers" title="Link to this heading">¶</a></h2>
 <p>Situational modifiers are any modifier that can be toggled on and off in the roll dialogue. This includes specialties that can be added via the Skills editor and custom bonuses that can be added through any item.</p>
+<p>All situational modifiers include the following input fields to let you customize how they appear:
+* <strong>Name</strong>: The name of the modifier as it will appear in the roll dialogue.
+* <strong>Value</strong>: The amount of dice the modifier will add to the roll.
+* <strong>Active When</strong>: This can either be <em>Always</em>, <em>Never</em>, or <em>If equals…</em>
+* * <em>Always</em> will make it automatically apply the modifier whenever the value paths is met.
+* * <em>Never</em> will ensure it never activates automatically.
+* * <em>If equals</em>…” will bring up two new fields, one called “Path” and a second “Value” input field.
+* * * “Path” is another value path, for example, “forms.active,” that the modifier will check for.
+* * * The new “Value” field is the number or string that is checked for in the path.
+* * * If the “Path” in the actor is equal to the “Value” field, the bonus will be automatically applied.
+* * The best usage for “If equals…” is the Werewolf forms, but can be applied to any fields actor trait that changes. For example, if you wanted to add a penalty that applies when a Vampire is at Hunger 5.
+* <strong>Unless</strong>: This is another path field that disables the modifier if the path in the Unless field is matched. For example, applying a bonus to all “abilities.strength” rolls <em>unless</em> it’s a “skills.stealth” roll.
+* <strong>Display when inactive</strong>: This is the default for all skill specialties. When toggled on while “Never” or “If Equals…” is set, it will cause the bonus to still appear so it can be toggled on when necessary.
+* <strong>Paths, separated by semicolons</strong>: This is where value paths are set. For example, a value path can be “skills.athletics”, “abilities.strength”, or even “disciplines.auspex”. This can even be more general, such as simply setting a value path like “skills”, “disciplines”, or “gifts”.</p>
 </section>
 <section id="specialties">
 <h2>Specialties<a class="headerlink" href="#specialties" title="Link to this heading">¶</a></h2>
@@ -46,7 +60,7 @@
 </section>
 <section id="item-feature-bonuses">
 <h2>Item &amp; Feature Bonuses<a class="headerlink" href="#item-feature-bonuses" title="Link to this heading">¶</a></h2>
-<p>All non-specialty bonuses can be added through their “Bonus” tab that appears on both items and various features.</p>
+<p>All non-specialty bonuses can be added through their “Bonus” tab that appears on both items and various features. While they work almost functionally like specialties do, they’re meant for much greater flexibility as opposed to the niche bonuses that specialties grant. Merits, flaws, backgrounds, gifts, disciplines–pretty much every single item can be given a bonus.</p>
 </section>
 <section id="splat-specific-bonuses">
 <h2>Splat-Specific Bonuses<a class="headerlink" href="#splat-specific-bonuses" title="Link to this heading">¶</a></h2>
