@@ -1,6 +1,59 @@
 Changelog
 ================
 
+4.0.0
+-----
+* When selecting a skill or attribute to be rolled, a brand new roll dialog will pop up! It will first prompt you for any skills, attributes, renown, or discipline dice you want to add, and then bring you to a different dialog window that will display all dice that'll be rolled where you can add situational modifiers and otherwise adjust the dice you're rolling before officially making the roll. Did I mention rolling dice? [Veilza]
+* Specialties are now marked on the skills themselves with an 'S' symbol. [Veilza]
+* Specialties can now be edited in the new Skill Editor dialog [Veilza]
+* Updates to how roll messages are displayed, including being able to see the actual dice that were rolled by clicking on the message. [Veilza]
+* If a roll has a description or flavourtext associated with it, it'll be displayed with the chat message generated with the roll. [Veilza]
+* Items can now be configured to have 'bonuses' that can show up alongside rolls, similar to how skill specialties are now handled. [Veilza]
+* Vampires have preconfigured potency bonuses that'll show up on discipline-based rolls. [Veilza]
+* Werewolf forms have preconfigured bonuses that'll show up depending on which form is active [Veilza]
+* Removed unnecessary punctuation from localization strings [Veilza]
+* Updated the Brazilian Portuguese translation files with new localizations [viniciusaraujo093]
+* Fixed an alignment issue on the Limited sheets [Veilza]
+* Added an API that has various functions useful for both modules and macros, including the ability to call the system's Roll function [Veilza]
+* Added support for rolling renown and disciplines directly [Veilza]
+* Added a modifier field to the custom rolls [Veilza]
+* Added the ability to process macros immediately after a roll, power or feature is used [Veilza]
+* Updated the adjust rage and adjust hunger macros to display a chat message after the adjustment [Veilza]
+* Added a willpower cost field to Werewolf gifts [Veilza]
+* Willpower damage is now output to chat [Veilza]
+* Willpower rerolls will now replace the original chatmessage being rerolled [Veilza]
+* Fixed an issue where rouse checks would cause multiple instances of hunger increase, even for discarded die [Veilza]
+* Spanish localization updates [erizocosmico]
+* Dark theme and actor banners will now update without having to refresh the page [Veilza]
+* Items will now be properly localized in the sidebar [Veilza]
+* Removed diceroller settings, due to the diceroller being disabled until it can be fixed [Veilza]
+* Russian translation thanks to [Xuula]
+* All .html files have been renamed to .hbs to properly allow code editors to pick up you're using Handlebars without any additional editing. [Veilza]
+* Various functions in the actor sheet have been moved to their own files [Veilza]
+* Various CSS stylings have been moved to their own files [Veilza]
+* The 'or' helper can now handle more than two given things to check for [Veilza]
+* Lots of other adjustments and fixes to enable code to be more clean and concise, as well as separating things into their own files for better maintainability. [Veilza]
+* Reworked the localization files by adding dot-notation and separating them into core/vampire/werewolf/hunter files for easier organisation [Veilza]
+* Fixed an issue with the gamesystem migration [Veilza]
+* Updated the way localizations for skills, attributes, renown, disciplines, and features are done in Handlebars templates [Veilza]
+* Fixed the convert-packs script [Veilza]
+* Added various missing localization strings and marked the ones that aren't yet localized [Veilza]
+* Changed how the system looks up the available game systems [Veilza]
+* Added new localization for item types [Veilza]
+* Removed unnecessary actor labels in the templating [Veilza]
+* Actorsheets will now be pulled from the ActorTypes.js definition file instead of hard-coded [Veilza]
+* Renamed "powers" assets folder to "items" and added various item icons, with a migration for old items [Veilza]
+* Items will now pull their icons from the "items" definition file [Veilza]
+* Reworded and renamed WOD5E settings to be more consistent [Veilza]
+* Removed the old "getItemDefaultName" function and newly created items will now use generateLabelAndLocalize instead [Veilza]
+* Moved blood-potency.js into the scripts folder [Veilza]
+* Added a new "reset actors" function to re-render the sheets with its existing data. [Veilza]
+* Upgraded the collapse function on actor sheets to prevent issues where some collapsible content wouldn't collapse and uncollapse [Veilza]
+* Changed "animal ken" to "animalken" in the actor data [Veilza]
+* Added max values to hunger and rage so they can appear as token bars [Veilza]
+* Removed unnecessary punctuation from localization files [Veilza]
+* Various fixes for migration files to make them more reliable and fix the debounced reload not always triggering [Veilza]
+
 3.1.3
 -----
 * Fixed an issue where willpower rerolling Rage dice would convert them into normal Werewolf dice [Veilza]
@@ -58,6 +111,9 @@ Changelog
 * The system now uses "WoDActor" and "WoDItem" as the export classes for base actors/items and their functionality [Veilza]
 * Reworked the migration scripts [Veilza]
 * All instances of "VTM5E" in localization and CSS classes have now been changed to "WOD5E," with a migration script to fix any sheets made from before this fix [Veilza]
+
+.. toctree::
+    :maxdepth: 0
 
 .. toctree::
     :maxdepth: 1
