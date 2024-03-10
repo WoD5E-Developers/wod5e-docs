@@ -59,7 +59,6 @@ Changelog
     * Upgraded the collapse function on actor sheets to prevent issues where some collapsible content wouldn't collapse and uncollapse [Veilza]
     * Changed "animal ken" to "animalken" in the actor data [Veilza]
     * Added max values to hunger and rage so they can appear as token bars [Veilza]
-    * Removed unnecessary punctuation from localization files [Veilza]
     * Various fixes for migration files to make them more reliable and fix the debounced reload not always triggering [Veilza]
 
 
