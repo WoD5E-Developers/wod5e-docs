@@ -39,7 +39,3 @@ Splat-Specific Bonuses
 Vampires automatically have Potency bonuses generated to apply to any discipline rolls.
 
 Werewolves have Form bonuses added and set to apply based on their current form.
-
-.. toctree::
-    :maxdepth: 2
-    :titlesonly:

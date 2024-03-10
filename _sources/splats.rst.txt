@@ -35,7 +35,3 @@ Werewolf sheets come with various bits of automation:
 * **Rage Dice.** Rage dice can be rolled by the *Rage* button in the sheet's header, or by clicking the "Rage/Willpower Cost" button the right side of any Gift. This will, if the setting is enabled, automatically reduce the rage on any failed Rage dice rolls.
 * **Form Transformations.** Werewolf sheets also come with automation for switching forms; upon clicking to switch forms, if there's a Rage cost to switching forms, the sheet will automatically roll any necessary Rage dice before updating your active form. If this reduces your Rage to 0, shifting forms will fail.
 * **Gift Costs.** Alongside Rage Dice automation, Gifts also have a "Willpower Cost" field, which can automatically damage willpower upon using the gift. This is done with the same button as rolling the Rage cost of a gift.
-
-.. toctree::
-    :maxdepth: 2
-    :titlesonly:
