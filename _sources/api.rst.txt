@@ -3,9 +3,9 @@ System API
 
 The World of Darkness 5e system has an API accessible to modules, macros, and the user's own console which allows a great amount of control over how you can interact with the system and its functions.
 
-WOD5E.Roll (*Object*)
----------------------
-A function that handles all rolls sent to the WOD5E system. WOD5E.Roll requires an object that can have any of the following parameters supplied to help construct and handle the ensuing roll.
+WOD5Eapi.Roll (*Object*)
+------------------------
+A function that handles all rolls sent to the WOD5E system. WOD5E.api.Roll requires an object that can have any of the following parameters supplied to help construct and handle the ensuing roll.
 
 All of the below parameters are technically optional, but for a roll to be made in the chat, you must at least include basicDice, advancedDice, or willpowerDamage.
 
@@ -28,29 +28,39 @@ All of the below parameters are technically optional, but for a roll to be made 
 * **selectors** (*Array, optional, default []*) Any selectors to use when compiling situational modifiers
 * **macro** (*String, optional, default ''*) A macro to run after the roll has been made
 
-WOD5E.getBasicDice (*Object*)
------------------------------
+WOD5E.api.getBasicDice (*Object*)
+---------------------------------
 A function that handles getting the appropriate number of basic dice for a roll, by grabbing the values of any given paths and adding them up as the total number returned, plus an optional flat modifier. For example, if valuePaths is equal to ['disciplines.animalism.value', 'skills.athletics.value'], it would total up the actor's Animalism and Athletics and return them as an integer. 
 
-This is meant to be used to retrieve the value for the **basicDice** property on WOD5E.Roll. If advancedDice are used, it's a good idea to retrieve the number of advancedDice first and then subtract the number of advancedDice from the total number of basicDice before providing it to the Roll function.
+This is meant to be used to retrieve the value for the **basicDice** property on WOD5E.api.Roll. If advancedDice are used, it's a good idea to retrieve the number of advancedDice first and then subtract the number of advancedDice from the total number of basicDice before providing it to the Roll function.
 
 * **valuePaths** (Array, optional, default to []) An array of paths to retrieve the modifiers from
 * **flatMod** (Integer, optional, default to 0) The flat modifier to add to the total number of basicDice
 * **actor** (Object, optional, default to speaker actor) The actor that is being looked up
 
-WOD5E.getAdvancedDice (*Object*)
---------------------------------
+WOD5E.api.getAdvancedDice (*Object*)
+------------------------------------
 A function to get what the advanced dice of the actor's roll should be and total to based on the provided actor's gamesystem.
 
-This is meant to be used to retrieve the value for the **advancedDice** property on WOD5E.Roll.
+This is meant to be used to retrieve the value for the **advancedDice** property on WOD5E.api.Roll.
 
 * **actor** (Object, optional, default to speaker actor) The actor that is being looked up
 
-WOD5E.getFlavorDescrption (*Object*)
-------------------------------------
+WOD5E.api.getFlavorDescrption (*Object*)
+----------------------------------------
 A function that handles getting the flavour of a roll by providing a path. For example, "disciplines.animalism.description" would pull the description for the Animalism discipline and add it to the roll.
 
-This is meant to be used to retrieve the value for the **flavor** property on WOD5E.Roll.
+This is meant to be used to retrieve the value for the **flavor** property on WOD5E.api.Roll.
 
 * **valuePath** (*String, optional, default ''*) The path to a description
 * **data** (*Object, optional, default {}*) The data object to look through for the valuePath, such as an item.system or actor.system object
+
+WOD5E.api.generateLabelAndLocalize (*String*)
+---------------------------------------------
+A function that takes a given string and returns the localized version of it. For example, doing WOD5E.api.generateLabelAndLocalize('auspex') will automatically localize it into "Auspex" without having to supply it as "WOD5E.api.VTM.Auspex" or the like.
+
+If you already know the string path to localization, it might be better to use Foundry's in-built localization. However, getLabelAndLocalize is good if you *don't* know the string path, such as if you have a combined list of skills and attributes, or are taking data that may include mixed lists.
+
+WOD5E.api.migrateWorld ()
+-------------------------
+A function that can be used in order to manually re-migrate the world. Useful if some actors didn't migrate properly or the migration didn't go off at all.
