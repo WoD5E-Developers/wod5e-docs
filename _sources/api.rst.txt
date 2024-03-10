@@ -1,0 +1,56 @@
+System API
+===================
+
+The World of Darkness 5e system has an API accessible to modules, macros, and the user's own console which allows a great amount of control over how you can interact with the system and its functions.
+
+WOD5E.Roll (*Object*)
+---------------------
+A function that handles all rolls sent to the WOD5E system. WOD5E.Roll requires an object that can have any of the following parameters supplied to help construct and handle the ensuing roll.
+
+All of the below parameters are technically optional, but for a roll to be made in the chat, you must at least include basicDice, advancedDice, or willpowerDamage.
+
+* **basicDice** (*Integer, optional, default 0*) The number of 'basic' dice to roll, such as v(ampire), w(erewolf), and h(unter) dice
+* **advancedDice** (*Integer, optional, default 0*) The number of 'advanced' dice to roll, such as (hun)g(er), r(age) and (de)s(peration) dice
+* **actor** (*Object, optional, default to speaker actor*) The actor that the roll is coming from
+* **data** (*Object, optional, default actor.system*) Actor or item data to pass along with the roll
+* **title** (*String, optional, default "Rolling"*) Title of the roll for the dialog/chat message
+* **disableBasicDice** (*Boolean, optional, default false*) Whether to disable basic dice on this roll
+* **disableAdvancedDice** (*Boolean, optional, default false*) Whether to disable advanced dice on this roll
+* **willpowerDamage** (*Integer, optional, default 0*) How much to damage willpower after the roll is complete
+* **increaseHunger** (*Boolean, optional, default false*) Whether to increase hunger on failures
+* **decreaseRage** (*Boolean, optional, default false*) Whether to reduce rage on failures
+* **difficulty** (*Integer, optional, default 0*) The number that the roll must succeed to count as a success
+* **flavor** (*String, optional, default ''*) Text that appears in the description of the roll
+* **callback** (*Function, optional*) A callable function for determining the chat message flavor given parts and data
+* **quickRoll** (*Boolean, optional, default false*) Whether the roll was called to bypass the roll dialog or not
+* **rollMode** (*String, optional, default FVTT's current roll mode*) Which roll mode the message should default as
+* **rerollHunger** (*Boolean, optional, default false*) Whether to reroll failed hunger dice
+* **selectors** (*Array, optional, default []*) Any selectors to use when compiling situational modifiers
+* **macro** (*String, optional, default ''*) A macro to run after the roll has been made
+
+WOD5E.getBasicDice (*Object*)
+-----------------------------
+A function that handles getting the appropriate number of basic dice for a roll, by grabbing the values of any given paths and adding them up as the total number returned, plus an optional flat modifier. For example, if valuePaths is equal to ['disciplines.animalism.value', 'skills.athletics.value'], it would total up the actor's Animalism and Athletics and return them as an integer. 
+
+This is meant to be used to retrieve the value for the **basicDice** property on WOD5E.Roll. If advancedDice are used, it's a good idea to retrieve the number of advancedDice first and then subtract the number of advancedDice from the total number of basicDice before providing it to the Roll function.
+
+* **valuePaths** (Array, optional, default to []) An array of paths to retrieve the modifiers from
+* **flatMod** (Integer, optional, default to 0) The flat modifier to add to the total number of basicDice
+* **actor** (Object, optional, default to speaker actor) The actor that is being looked up
+
+WOD5E.getAdvancedDice (*Object*)
+--------------------------------
+A function to get what the advanced dice of the actor's roll should be and total to based on the provided actor's gamesystem.
+
+This is meant to be used to retrieve the value for the **advancedDice** property on WOD5E.Roll.
+
+* **actor** (Object, optional, default to speaker actor) The actor that is being looked up
+
+WOD5E.getFlavorDescrption (*Object*)
+------------------------------------
+A function that handles getting the flavour of a roll by providing a path. For example, "disciplines.animalism.description" would pull the description for the Animalism discipline and add it to the roll.
+
+This is meant to be used to retrieve the value for the **flavor** property on WOD5E.Roll.
+
+* **valuePath** (*String, optional, default ''*) The path to a description
+* **data** (*Object, optional, default {}*) The data object to look through for the valuePath, such as an item.system or actor.system object

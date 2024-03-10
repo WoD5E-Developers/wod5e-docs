@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>System API &#8212; WOD5E Docs 1.0.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=4f649999" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=9869c777" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <script src="_static/documentation_options.js?v=8d563738"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/design-tabs.js?v=36754332"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Bonuses &amp; Modifiers" href="bonuses.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="bonuses.html" title="Bonuses &amp; Modifiers"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">WOD5E Docs 1.0.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">System API</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="system-api">
+<h1>System API<a class="headerlink" href="#system-api" title="Link to this heading">¶</a></h1>
+<p>The World of Darkness 5e system has an API accessible to modules, macros, and the user’s own console which allows a great amount of control over how you can interact with the system and its functions.</p>
+<section id="wod5e-roll-object">
+<h2>WOD5E.Roll (<em>Object</em>)<a class="headerlink" href="#wod5e-roll-object" title="Link to this heading">¶</a></h2>
+<p>A function that handles all rolls sent to the WOD5E system. WOD5E.Roll requires an object that can have any of the following parameters supplied to help construct and handle the ensuing roll.</p>
+<p>All of the below parameters are technically optional, but for a roll to be made in the chat, you must at least include basicDice, advancedDice, or willpowerDamage.</p>
+<ul class="simple">
+<li><p><strong>basicDice</strong> (<em>Integer, optional, default 0</em>) The number of ‘basic’ dice to roll, such as v(ampire), w(erewolf), and h(unter) dice</p></li>
+<li><p><strong>advancedDice</strong> (<em>Integer, optional, default 0</em>) The number of ‘advanced’ dice to roll, such as (hun)g(er), r(age) and (de)s(peration) dice</p></li>
+<li><p><strong>actor</strong> (<em>Object, optional, default to speaker actor</em>) The actor that the roll is coming from</p></li>
+<li><p><strong>data</strong> (<em>Object, optional, default actor.system</em>) Actor or item data to pass along with the roll</p></li>
+<li><p><strong>title</strong> (<em>String, optional, default “Rolling”</em>) Title of the roll for the dialog/chat message</p></li>
+<li><p><strong>disableBasicDice</strong> (<em>Boolean, optional, default false</em>) Whether to disable basic dice on this roll</p></li>
+<li><p><strong>disableAdvancedDice</strong> (<em>Boolean, optional, default false</em>) Whether to disable advanced dice on this roll</p></li>
+<li><p><strong>willpowerDamage</strong> (<em>Integer, optional, default 0</em>) How much to damage willpower after the roll is complete</p></li>
+<li><p><strong>increaseHunger</strong> (<em>Boolean, optional, default false</em>) Whether to increase hunger on failures</p></li>
+<li><p><strong>decreaseRage</strong> (<em>Boolean, optional, default false</em>) Whether to reduce rage on failures</p></li>
+<li><p><strong>difficulty</strong> (<em>Integer, optional, default 0</em>) The number that the roll must succeed to count as a success</p></li>
+<li><p><strong>flavor</strong> (<em>String, optional, default ‘’</em>) Text that appears in the description of the roll</p></li>
+<li><p><strong>callback</strong> (<em>Function, optional</em>) A callable function for determining the chat message flavor given parts and data</p></li>
+<li><p><strong>quickRoll</strong> (<em>Boolean, optional, default false</em>) Whether the roll was called to bypass the roll dialog or not</p></li>
+<li><p><strong>rollMode</strong> (<em>String, optional, default FVTT’s current roll mode</em>) Which roll mode the message should default as</p></li>
+<li><p><strong>rerollHunger</strong> (<em>Boolean, optional, default false</em>) Whether to reroll failed hunger dice</p></li>
+<li><p><strong>selectors</strong> (<em>Array, optional, default []</em>) Any selectors to use when compiling situational modifiers</p></li>
+<li><p><strong>macro</strong> (<em>String, optional, default ‘’</em>) A macro to run after the roll has been made</p></li>
+</ul>
+</section>
+<section id="wod5e-getbasicdice-object">
+<h2>WOD5E.getBasicDice (<em>Object</em>)<a class="headerlink" href="#wod5e-getbasicdice-object" title="Link to this heading">¶</a></h2>
+<p>A function that handles getting the appropriate number of basic dice for a roll, by grabbing the values of any given paths and adding them up as the total number returned, plus an optional flat modifier. For example, if valuePaths is equal to [‘disciplines.animalism.value’, ‘skills.athletics.value’], it would total up the actor’s Animalism and Athletics and return them as an integer.</p>
+<p>This is meant to be used to retrieve the value for the <strong>basicDice</strong> property on WOD5E.Roll. If advancedDice are used, it’s a good idea to retrieve the number of advancedDice first and then subtract the number of advancedDice from the total number of basicDice before providing it to the Roll function.</p>
+<ul class="simple">
+<li><p><strong>valuePaths</strong> (Array, optional, default to []) An array of paths to retrieve the modifiers from</p></li>
+<li><p><strong>flatMod</strong> (Integer, optional, default to 0) The flat modifier to add to the total number of basicDice</p></li>
+<li><p><strong>actor</strong> (Object, optional, default to speaker actor) The actor that is being looked up</p></li>
+</ul>
+</section>
+<section id="wod5e-getadvanceddice-object">
+<h2>WOD5E.getAdvancedDice (<em>Object</em>)<a class="headerlink" href="#wod5e-getadvanceddice-object" title="Link to this heading">¶</a></h2>
+<p>A function to get what the advanced dice of the actor’s roll should be and total to based on the provided actor’s gamesystem.</p>
+<p>This is meant to be used to retrieve the value for the <strong>advancedDice</strong> property on WOD5E.Roll.</p>
+<ul class="simple">
+<li><p><strong>actor</strong> (Object, optional, default to speaker actor) The actor that is being looked up</p></li>
+</ul>
+</section>
+<section id="wod5e-getflavordescrption-object">
+<h2>WOD5E.getFlavorDescrption (<em>Object</em>)<a class="headerlink" href="#wod5e-getflavordescrption-object" title="Link to this heading">¶</a></h2>
+<p>A function that handles getting the flavour of a roll by providing a path. For example, “disciplines.animalism.description” would pull the description for the Animalism discipline and add it to the roll.</p>
+<p>This is meant to be used to retrieve the value for the <strong>flavor</strong> property on WOD5E.Roll.</p>
+<ul class="simple">
+<li><p><strong>valuePath</strong> (<em>String, optional, default ‘’</em>) The path to a description</p></li>
+<li><p><strong>data</strong> (<em>Object, optional, default {}</em>) The data object to look through for the valuePath, such as an item.system or actor.system object</p></li>
+</ul>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">System API</a><ul>
+<li><a class="reference internal" href="#wod5e-roll-object">WOD5E.Roll (<em>Object</em>)</a></li>
+<li><a class="reference internal" href="#wod5e-getbasicdice-object">WOD5E.getBasicDice (<em>Object</em>)</a></li>
+<li><a class="reference internal" href="#wod5e-getadvanceddice-object">WOD5E.getAdvancedDice (<em>Object</em>)</a></li>
+<li><a class="reference internal" href="#wod5e-getflavordescrption-object">WOD5E.getFlavorDescrption (<em>Object</em>)</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="bonuses.html"
+                          title="previous chapter">Bonuses &amp; Modifiers</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/api.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="bonuses.html" title="Bonuses &amp; Modifiers"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">WOD5E Docs 1.0.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">System API</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2024, Veilza.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+    </div>
+  </body>
+</html>

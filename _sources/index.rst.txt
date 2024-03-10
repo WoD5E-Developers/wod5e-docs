@@ -14,6 +14,7 @@ General Overview
    changelog
    splats
    bonuses
+   api
 
 Dark Pack License
 -----------------
