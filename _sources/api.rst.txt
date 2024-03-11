@@ -3,8 +3,8 @@ System API
 
 The World of Darkness 5e system has an API accessible to modules, macros, and the user's own console which allows a great amount of control over how you can interact with the system and its functions.
 
-WOD5Eapi.Roll (*Object*)
-------------------------
+WOD5E.api.Roll (*Object*)
+-------------------------
 A function that handles all rolls sent to the WOD5E system. WOD5E.api.Roll requires an object that can have any of the following parameters supplied to help construct and handle the ensuing roll.
 
 All of the below parameters are technically optional, but for a roll to be made in the chat, you must at least include basicDice, advancedDice, or willpowerDamage.
@@ -34,9 +34,9 @@ A function that handles getting the appropriate number of basic dice for a roll,
 
 This is meant to be used to retrieve the value for the **basicDice** property on WOD5E.api.Roll. If advancedDice are used, it's a good idea to retrieve the number of advancedDice first and then subtract the number of advancedDice from the total number of basicDice before providing it to the Roll function.
 
-* **valuePaths** (Array, optional, default to []) An array of paths to retrieve the modifiers from
-* **flatMod** (Integer, optional, default to 0) The flat modifier to add to the total number of basicDice
-* **actor** (Object, optional, default to speaker actor) The actor that is being looked up
+* **valuePaths** (*Array, optional, default to []*) An array of paths to retrieve the modifiers from
+* **flatMod** (*Integer, optional, default to 0*) The flat modifier to add to the total number of basicDice
+* **actor** (*Object, optional, default to speaker actor*) The actor that is being looked up
 
 WOD5E.api.getAdvancedDice (*Object*)
 ------------------------------------
@@ -44,7 +44,7 @@ A function to get what the advanced dice of the actor's roll should be and total
 
 This is meant to be used to retrieve the value for the **advancedDice** property on WOD5E.api.Roll.
 
-* **actor** (Object, optional, default to speaker actor) The actor that is being looked up
+* **actor** (*Object, optional, default to speaker actor*) The actor that is being looked up
 
 WOD5E.api.getFlavorDescrption (*Object*)
 ----------------------------------------

@@ -39,8 +39,8 @@
   <section id="system-api">
 <h1>System API<a class="headerlink" href="#system-api" title="Link to this heading">¶</a></h1>
 <p>The World of Darkness 5e system has an API accessible to modules, macros, and the user’s own console which allows a great amount of control over how you can interact with the system and its functions.</p>
-<section id="wod5eapi-roll-object">
-<h2>WOD5Eapi.Roll (<em>Object</em>)<a class="headerlink" href="#wod5eapi-roll-object" title="Link to this heading">¶</a></h2>
+<section id="wod5e-api-roll-object">
+<h2>WOD5E.api.Roll (<em>Object</em>)<a class="headerlink" href="#wod5e-api-roll-object" title="Link to this heading">¶</a></h2>
 <p>A function that handles all rolls sent to the WOD5E system. WOD5E.api.Roll requires an object that can have any of the following parameters supplied to help construct and handle the ensuing roll.</p>
 <p>All of the below parameters are technically optional, but for a roll to be made in the chat, you must at least include basicDice, advancedDice, or willpowerDamage.</p>
 <ul class="simple">
@@ -69,9 +69,9 @@
 <p>A function that handles getting the appropriate number of basic dice for a roll, by grabbing the values of any given paths and adding them up as the total number returned, plus an optional flat modifier. For example, if valuePaths is equal to [‘disciplines.animalism.value’, ‘skills.athletics.value’], it would total up the actor’s Animalism and Athletics and return them as an integer.</p>
 <p>This is meant to be used to retrieve the value for the <strong>basicDice</strong> property on WOD5E.api.Roll. If advancedDice are used, it’s a good idea to retrieve the number of advancedDice first and then subtract the number of advancedDice from the total number of basicDice before providing it to the Roll function.</p>
 <ul class="simple">
-<li><p><strong>valuePaths</strong> (Array, optional, default to []) An array of paths to retrieve the modifiers from</p></li>
-<li><p><strong>flatMod</strong> (Integer, optional, default to 0) The flat modifier to add to the total number of basicDice</p></li>
-<li><p><strong>actor</strong> (Object, optional, default to speaker actor) The actor that is being looked up</p></li>
+<li><p><strong>valuePaths</strong> (<em>Array, optional, default to []</em>) An array of paths to retrieve the modifiers from</p></li>
+<li><p><strong>flatMod</strong> (<em>Integer, optional, default to 0</em>) The flat modifier to add to the total number of basicDice</p></li>
+<li><p><strong>actor</strong> (<em>Object, optional, default to speaker actor</em>) The actor that is being looked up</p></li>
 </ul>
 </section>
 <section id="wod5e-api-getadvanceddice-object">
@@ -79,7 +79,7 @@
 <p>A function to get what the advanced dice of the actor’s roll should be and total to based on the provided actor’s gamesystem.</p>
 <p>This is meant to be used to retrieve the value for the <strong>advancedDice</strong> property on WOD5E.api.Roll.</p>
 <ul class="simple">
-<li><p><strong>actor</strong> (Object, optional, default to speaker actor) The actor that is being looked up</p></li>
+<li><p><strong>actor</strong> (<em>Object, optional, default to speaker actor</em>) The actor that is being looked up</p></li>
 </ul>
 </section>
 <section id="wod5e-api-getflavordescrption-object">
@@ -113,7 +113,7 @@
     <h3><a href="index.html">Table of Contents</a></h3>
     <ul>
 <li><a class="reference internal" href="#">System API</a><ul>
-<li><a class="reference internal" href="#wod5eapi-roll-object">WOD5Eapi.Roll (<em>Object</em>)</a></li>
+<li><a class="reference internal" href="#wod5e-api-roll-object">WOD5E.api.Roll (<em>Object</em>)</a></li>
 <li><a class="reference internal" href="#wod5e-api-getbasicdice-object">WOD5E.api.getBasicDice (<em>Object</em>)</a></li>
 <li><a class="reference internal" href="#wod5e-api-getadvanceddice-object">WOD5E.api.getAdvancedDice (<em>Object</em>)</a></li>
 <li><a class="reference internal" href="#wod5e-api-getflavordescrption-object">WOD5E.api.getFlavorDescrption (<em>Object</em>)</a></li>
