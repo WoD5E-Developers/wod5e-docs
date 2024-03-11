@@ -46,9 +46,9 @@ This is meant to be used to retrieve the value for the **advancedDice** property
 
 * **actor** (*Object, optional, default to speaker actor*) The actor that is being looked up
 
-WOD5E.api.getFlavorDescrption (*Object*)
-----------------------------------------
-A function that handles getting the flavour of a roll by providing a path. For example, "disciplines.animalism.description" would pull the description for the Animalism discipline and add it to the roll.
+WOD5E.api.getFlavorDescription (*Object*)
+-----------------------------------------
+A function that handles getting the description of a roll by providing a path. For example, "disciplines.animalism.description" would pull the description for the Animalism discipline and add it to the roll.
 
 This is meant to be used to retrieve the value for the **flavor** property on WOD5E.api.Roll.
 
