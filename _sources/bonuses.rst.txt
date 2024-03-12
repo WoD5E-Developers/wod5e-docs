@@ -21,7 +21,6 @@ All situational modifiers include the following input fields to let you customiz
 
     * The best usage for "If equals..." is the Werewolf forms, but can be applied to any fields actor trait that changes. For example, if you wanted to add a penalty that applies when a Vampire is at Hunger 5.
 
-
 * **Unless**: This is another path field that disables the modifier if the path in the Unless field is matched. For example, applying a bonus to all "abilities.strength" rolls *unless* it's a "skills.stealth" roll.
 * **Display when inactive**: This is the default for all skill specialties. When toggled on while "Never" or "If Equals..." is set, it will cause the bonus to still appear so it can be toggled on when necessary.
 * **Paths, separated by semicolons**: This is where value paths are set. For example, a value path can be "skills.athletics", "abilities.strength", or even "disciplines.auspex". This can even be more general, such as simply setting a value path like "skills", "disciplines", or "gifts".

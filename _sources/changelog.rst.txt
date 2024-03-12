@@ -21,6 +21,9 @@ Changelog
     * Fixed an issue where placeholder text was hard to read in dark theme [Veilza]
     * Added localization keys for various parts of the bonuses/specialties menus [Veilza]
     * Added a default level of 1 to Werewolf gifts [Veilza]
+    * Changing "Active when..." on bonuses will now properly reveal or hide the other two fields. [Veilza]
+    * Renamed the other two "Active When..." fields to be more clear [Veilza]
+    * Updated the layout of the bonuses to be more intuitive [Veilza]
 
 .. dropdown:: 4.0.0
     :animate: fade-in-slide-down
