@@ -1,10 +1,30 @@
 Changelog
 ================
 
-.. dropdown:: 4.0.0
+.. dropdown:: 4.0.1
     :animate: fade-in-slide-down
     :color: dark
     :open:
+
+    .. note::
+        **System manifest:** https://github.com/Rayji96/foundry-V5/releases/download/4.0.1/system.json
+        
+        **Direct download link:** https://github.com/Rayji96/foundry-V5/releases/download/4.0.1/vtm5e-4.0.1.zip
+
+    * Fix an issue where willpower reroll animations would only play for the originating user. [Veilza]
+    * Italian translation updates [Arcadio21]
+    * French localization updates [Reiaka]
+    * Dark theme updates to be more colourblind friendly [Veilza]
+    * Removed fields that were unnecessary to the Specialties menu [Veilza]
+    * Fixed a styling issue with the tabs on the Skill Editor dialogue [Veilza]
+    * Fixed an issue where text editors would have strange colour stylings [Veilza]
+    * Fixed an issue where placeholder text was hard to read in dark theme [Veilza]
+    * Added localization keys for various parts of the bonuses/specialties menus [Veilza]
+    * Added a default level of 1 to Werewolf gifts [Veilza]
+
+.. dropdown:: 4.0.0
+    :animate: fade-in-slide-down
+    :color: dark
 
     .. note::
         **System manifest:** https://github.com/Rayji96/foundry-V5/releases/download/4.0.0/system.json
