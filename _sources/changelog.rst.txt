@@ -25,6 +25,7 @@ Changelog
     * Renamed the other two "Active When..." fields to be more clear [Veilza]
     * Updated the layout of the bonuses to be more intuitive [Veilza]
     * Fixed an issue where creating actors and items in a compendium would create them in the world instead [Veilza]
+    * Fix issue where messy criticals would only show up if more than two Hunger dice were critical [Veilza]
 
 .. dropdown:: 4.0.0
     :animate: fade-in-slide-down
