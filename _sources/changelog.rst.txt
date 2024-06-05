@@ -1,10 +1,118 @@
 Changelog
 ================
 
-.. dropdown:: 4.1.0
+.. dropdown:: 4.3.2
     :animate: fade-in-slide-down
     :color: dark
     :open:
+
+    .. note::
+        **System manifest:** https://github.com/Rayji96/foundry-V5/releases/download/4.3.2/system.json
+        
+        **Direct download link:** https://github.com/Rayji96/foundry-V5/releases/download/4.3.2/vtm5e-4.3.2.zip
+
+    * Fixed an issue where ghouls wouldn't be able to roll from datasets. [Veilza]
+    * Disallowed ghouls from using blood surges. [Veilza]
+    * Updates to the French localization [Cereb, via Discord]
+    * Removed a leading slash from URLs to correct issues with the routePrefix configuration [Veilza]
+
+.. dropdown:: 4.3.1
+    :animate: fade-in-slide-down
+    :color: dark
+
+    .. note::
+        **System manifest:** https://github.com/Rayji96/foundry-V5/releases/download/4.3.1/system.json
+        
+        **Direct download link:** https://github.com/Rayji96/foundry-V5/releases/download/4.3.1/vtm5e-4.3.1.zip
+
+    * Fixed an issue where Hunter edges would disappear and become uninteractable if edited [Veilza]
+    * Similarly to the above, fixed an issue where if a Hunter edge somehow was linked to a perk that didn't exist, the sheet would glitch out [Veilza]
+    * Removed the trashbin from perk/gift headers (because it did nothing anyway) [Veilza]
+
+.. dropdown:: 4.3.0
+    :animate: fade-in-slide-down
+    :color: dark
+
+    .. note::
+        **System manifest:** https://github.com/Rayji96/foundry-V5/releases/download/4.3.0/system.json
+        
+        **Direct download link:** https://github.com/Rayji96/foundry-V5/releases/download/4.3.0/vtm5e-4.3.0.zip
+
+    * German translation updates [LorduFreeman]
+    * Health and willpower trackers for group members are now displayed on group sheets [Veilza]
+    * Styling adjustment for group member subitem displays [Veilza]
+    * Fixed an issue where using "Delete All" on a folder that used to have actors that were moved to a group sheet would be deleted. [Veilza]
+    * Added default names for items and actors that'll be used if someone creates an item or act without setting a name [Veilza]
+    * Added a new warning to shift down when a Werewolf has Lost the Wolf [Veilza]
+    * Added various missing localization [Veilza]
+    * Added a Blood Surge checkbox on the roll dialogue [Veilza]
+    * Added a hoverover title for the Remorse button above the Humanity tracker [Veilza]
+    * Added a check to determine whether square trackers are editable or not [Veilza]
+    * New release workflow to automatically add new releases to the Foundry package page [WeinerDolphin]
+    * Fixed an issue where willpower rerolls wouldn't work if Dice So Nice wasn't enabled [Veilza]
+    * V12 Compatibility update [Veilza]
+    * * Transitioned now-depricated functions duplicate and mergeObject [Veilza]
+    * * Removed all instances of enrichHTML in handlebars in favour of enriching within scripts instead [Veilza]
+
+.. dropdown:: 4.2.1
+    :animate: fade-in-slide-down
+    :color: dark
+
+    .. note::
+        **System manifest:** https://github.com/Rayji96/foundry-V5/releases/download/4.2.1/system.json
+        
+        **Direct download link:** https://github.com/Rayji96/foundry-V5/releases/download/4.2.1/vtm5e-4.2.1.zip
+
+    * Fixed an issue where if an actor was suddenly no longer in the world after being added to a group, it could cause the actor directory to no longer render at all. [Veilza]
+    * Fixed an issue where willpower rerolling successes and crits wouldn't properly update the roll totals. [Veilza]
+    * Small update to German localization [LorduFreeman]
+    * Added missing localization key for Hunting DIfficulty to non-English localization files [Veilza]
+
+.. dropdown:: 4.2.0
+    :animate: fade-in-slide-down
+    :color: dark
+
+    .. note::
+        **System manifest:** https://github.com/Rayji96/foundry-V5/releases/download/4.2.0/system.json
+        
+        **Direct download link:** https://github.com/Rayji96/foundry-V5/releases/download/4.2.0/vtm5e-4.2.0.zip
+
+    * Fix the Add6Dice localization in Blood Potency [Veilza]
+    * Fix a display issue with the Russian localization of skills and attributes [Veilza]
+    * Fix generateLocalizedLabel not returning the proper display names of some features [Veilza]
+    * Fix the "Hidden" attribute in the Storyteller Settings not actually hiding skills/attributes [Veilza]
+    * Added a "Basic Roll" macro to the macro compendium [Veilza]
+    * Made sheet locking persist and default to unlocked to solve confusion related to the lock button [Veilza]
+    * Updated the visual border of the situational modifier window to be more visible [Veilza]
+    * Added a Pack sheet [Veilza]
+    * Added new Group Sheet functionalities, including group sheets as folders in the actor directory and being able to list actors that are part of a group. [Veilza]
+    * Updated German localizations [LorduFreeman]
+    * Fixed an issue where Background dots weren't editable on the unlocked sheet [LorduFreeman]
+    * Added some useful flags to roll data, such as the system, difficulty, totalResult, and rollSuccessful [Veilza]
+    * Re-added the ability to hover over the "S" beside skills to list which specialties are associated with that skill [Veilza]
+    * Fix the Difficulty of a roll being reset on Willpower Rerolls [Veilza]
+    * After a successful Remorse roll, the Humanity tracker will be cleared of stains. On a failed Remorse roll, the Humanity tracker will reduce the Humanity value by 1 and be cleared of stains. [ArtAmadar]
+    * Added Ukrainian localization, obtained from the community module [Veilza]
+    * Moved Attribute/Skill lists into a helper for the sake of rendering them in Handlebars [Veilza]
+    * Sheet type headers are now localized in the Handlebars file, not the Actor script class [Veilza]
+    * Moved various roll functions out of Handlebar helpers and into the Actor sheet class code. [ArtAmadar]
+
+.. dropdown:: 4.1.1
+    :animate: fade-in-slide-down
+    :color: dark
+
+    .. note::
+        **System manifest:** https://github.com/Rayji96/foundry-V5/releases/download/4.1.1/system.json
+        
+        **Direct download link:** https://github.com/Rayji96/foundry-V5/releases/download/4.1.1/vtm5e-4.1.1.zip
+
+    * Fixed skills not properly showing up on items. [Veilza]
+    * Fix edge and gift descriptions in dark theme [Veilza]
+    * Fix sidebar popout text being unreadable [Veilza]
+
+.. dropdown:: 4.1.0
+    :animate: fade-in-slide-down
+    :color: dark
 
     .. note::
         **System manifest:** https://github.com/Rayji96/foundry-V5/releases/download/4.1.0/system.json
