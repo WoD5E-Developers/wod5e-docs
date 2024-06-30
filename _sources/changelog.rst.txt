@@ -1,10 +1,63 @@
 Changelog
 ================
 
-.. dropdown:: 4.3.2
+.. dropdown:: 4.4.1
     :animate: fade-in-slide-down
     :color: dark
     :open:
+
+    .. note::
+        **System manifest:** https://github.com/Rayji96/foundry-V5/releases/download/4.4.1/system.json
+        
+        **Direct download link:** https://github.com/Rayji96/foundry-V5/releases/download/4.4.1/vtm5e-4.4.1.zip
+
+    * Header labels in actor sheets are re-centered again [Veilza]
+    * Custom attributes and skills will now properly be removed from actor sheets when deleted in the storyteller menu [Veilza]
+
+.. dropdown:: 4.4.0
+    :animate: fade-in-slide-down
+    :color: dark
+
+    .. note::
+        **System manifest:** https://github.com/Rayji96/foundry-V5/releases/download/4.4.0/system.json
+        
+        **Direct download link:** https://github.com/Rayji96/foundry-V5/releases/download/4.4.0/vtm5e-4.4.0.zip
+
+    * Additions to the storyteller menu - now the ability to add custom attributes and skills! [Veilza]
+    * German translation updates [LorduFreeman] and [FederSchakal]
+    * Italian translation updates [arcadio21]
+    * Russian translation updates [IHappyEndI]
+    * Various fixes to situational modifiers and its "ifEquals" field [Veilza]
+    * Various improvements to the rendering of skills, particularly the "edit skill" button [Veilza]
+    * Enabled blood surges to be done on the second roll menu [Veilza]
+    * Fixed confusing appearance of the hunger warning [Veilza]
+    * Settings menus now have localization [Veilza]
+    * Fixed items being unable to be dropped onto group sheets [Veilza]
+    * Fixed exceptional dicepools on SPC sheets to now support modified and custom skills [Veilza]
+    * Fixed the hint text in the config menus being too dark to read in dark mode [Veilza]
+    * Fixed the text in the macro menu being too light to read in dark mode [Veilza]
+    * Upgrades to the generateLabelAndLocalize function to allow for custom keys [Veilza]
+    * Rework how getList() returns the list [Veilza]
+    * Complete overhaul of how items are created in the actor sheets [Veilza]
+    * Renamed the localization groupings for skills, attributes, items, and other strings that were being error'd out by some translation modules [Veilza]
+    * Localization now has the "New {string}" key to enable dynamically appending the word 'New' to things. [Veilza]
+    * Removed unnecessary custom "New Actor/Item" dialog script for the sidebars [Veilza]
+    * Update localization of actors/items to integrate with Foundry's natural localization of document titles [Veilza]
+
+.. dropdown:: 4.3.3
+    :animate: fade-in-slide-down
+    :color: dark
+
+    .. note::
+        **System manifest:** https://github.com/Rayji96/foundry-V5/releases/download/4.3.3/system.json
+        
+        **Direct download link:** https://github.com/Rayji96/foundry-V5/releases/download/4.3.3/vtm5e-4.3.3.zip
+
+    * Fixed an issue where the "Show to Chat" button wouldn't display the item description in the chat message [Veilza]
+
+.. dropdown:: 4.3.2
+    :animate: fade-in-slide-down
+    :color: dark
 
     .. note::
         **System manifest:** https://github.com/Rayji96/foundry-V5/releases/download/4.3.2/system.json
